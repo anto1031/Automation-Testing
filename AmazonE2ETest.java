@@ -35,8 +35,6 @@ public class AmazonE2ETest
 	
 	private WebDriver driver;
 	private String BaseURL;
-	
-	//Allows scrolling page
 	JavascriptExecutor jse;		
 	
 	@BeforeMethod
@@ -90,21 +88,6 @@ public class AmazonE2ETest
 		WebElement signIn = driver.findElement(By.id("signInSubmit"));
 		signIn.click();
 		Thread.sleep(2000);	
-		
-//		
-//		Actions myAction = new Actions(driver);
-//		WebElement mainElement = driver.findElement(By.id("nav-icon nav-arrow null"));
-//		myAction.moveToElement(mainElement).perform();
-//		Thread.sleep(2000);
-//				
-//		WebElement subElement = driver.findElement(By.xpath("//span[@class='nav-action-inner']"));
-//		Thread.sleep(2000);
-//		subElement.click();
-		
-		
-		//WebElement Email = driver.findElement(By.xpath("//input[@name='email']"));
-		
-		//input[@id='ap_email']
 		
 	}
 	
@@ -181,10 +164,6 @@ public class AmazonE2ETest
 					Thread.sleep(2000);
 					addToCart.click();
 					Thread.sleep(2000);
-					//Message box window
-					//JFrame frame = new JFrame("Simple GUI");
-					//JOptionPane.showMessageDialog(frame, "Eggs are not supposed to be green.");
-					//WebElement popUp = driver.findElement(By.id("attachSiNoCoverage-announce"));
 				
 					//Deals with pop up which appears after user attempts to add to basket
 					try {
@@ -280,10 +259,6 @@ public class AmazonE2ETest
 		int listPosition = 0;
 		for( WebElement handle:tabs)
 			{
-			//Integer.parseInt(driver.findElement(By.WebElement).getText());
-			
-		//	System.out.println(Integer.parseInt(handle.getText()));
-			//System.out.println(Integer.parseInt(handle.getText()));
 			int Price = Integer.parseInt(handle.getText());
 			if (Price < lowestPrice)
 				{
@@ -295,30 +270,19 @@ public class AmazonE2ETest
 			
 			//System.out.println(handle);	
 			System.out.println("this is the list!");
-			//WebElement textElement = driver.findElement(By.xpath("//span[@class='a-price-whole']"));
-			//String text = textElement.getText();
-			//System.out.println("Value: " + text);
 			}
 		System.out.println(lowestPrice);	
 		
 		
 	
 			System.out.println(amountName + " IS THE AMOUNT NAME");
-			//WebElement findElement = driver.findElement(By.xpath("//*[contains(text(), amountName)]"));
-			//System.out.println(findElement);
-			//WebElement findElement2 = tabs.get(listPosition);
-			//System.out.println(findElement2);
 			
-			//dynamically selecting Submit button depending on user preference of price
+			//dynamically selecting Submit button which corresponds on user preference of price
 			System.out.println("list position is" +listPosition);
 			System.out.println("this is answer " + listPosition + 1);
 			driver.findElement(By.xpath("(//input[@name='submit.addToCart'])["+listPosition +1 +"]")).click();
 			
-			//submit.addToCart
-			//(//input[@id="search_query"])[2]
-	}
-	
-		
+	}	
 			@AfterMethod
 			@AfterClass
 			public void tearDown() throws Exception {
