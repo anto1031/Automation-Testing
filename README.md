@@ -1,7 +1,7 @@
 # Automation-Testing
 Contains Testscripts that are created by Anthony McSharry
 
-In this test script my objective was to create an E2E test script of of a widley used Web application.
+In this test script my objective was to create an E2E test script of a widley used Web application.
 The application I had chosen was Amazon.co.uk, My objective was to automate an E2E Test of the typical Amazon Customer purchase process.
 
 The E2E Process covers the following:
